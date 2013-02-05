@@ -1,4 +1,4 @@
-Tutorial: Coping with unknown coupling delays
+Tutorial: Dealing with unknown coupling delays
 =====================================================
 
 [Back to my homepage][homepage]
@@ -14,9 +14,6 @@ with [TIM Matlab interface][tim-matlab].
 
 [tim-matlab]: [[Ref: tim_matlab.txt]]
 
-__Note:__ We recommend that you proceed with this tutorial only after reading
-through [this other tutorial][tutorial-gauss].
-
 [tutorial-gauss]: [[Ref: tutorial_gauss.txt]]
 
 Tutorial files
@@ -26,7 +23,7 @@ Here we provide the Matlab scripts that are used in this tutorial.
 
 [Download tutorial files][tutorial-circuits-files]
 
-[tutorial-circuits-files]: files/tutorial-circuits-1.0.0.zip
+[tutorial-circuits-files]: http://kasku.org/tutorials/tutorial_circuits.zip
 
 Using the scripts above you can easily reproduce the final results of
 the tutorial. However, our purpose is to teach you how to write the analysis
@@ -39,7 +36,7 @@ place it in the same folder as the tutorial scripts:
 
 [Download tutorial dataset][tutorial-circuits-dataset]
 
-[tutorial-circuits-dataset]: files/tutorial-circuits-data.zip
+[tutorial-circuits-dataset]: http://kasku.org/tutorials/tutorial_circuits_data.zip
 
 
 Data generation
