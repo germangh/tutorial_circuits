@@ -1,7 +1,9 @@
 Tutorial: Coping with unknown coupling delays
 =====================================================
 
-[[Parent]]: tutorials.txt
+[Back to my homepage][homepage]
+
+[homepage]: http://germangh.com
 
 In this tutorial we will study the coupling dynamics underlying a real
 dataset of experimental measurements. The particularity of this tutorial is
