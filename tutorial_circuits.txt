@@ -104,8 +104,8 @@ embed in higher dimensions until the results of the analysis are consistent.
 For convenience, we shall define a lambda function (or `function_handle` 
 in Matlab's terminology) as follows:
 
-	>> estimator = @(x) transfer_entropy_t(x(1,:), x(2,:), x(3,:), ...
-		5, 0, 5:30, 0, 20);
+	>> estimator = @(x) transfer_entropy_t(x(1,:), x(2,:), ...
+			 x(3,:), 5, 0, 5:30, 0, 20);
 
 This lambda function bundles together the chosen information measure 
 [[FileLink: transfer_entropy_t.m]] with its associated input parameters 
@@ -123,7 +123,8 @@ slow, we can reduce the variance by simply smoothing the estimates e.g.
 with a moving average filter. In order to incorporate this post-processing 
 step, we further define the following lambda function:
 
-	>> estimator_smooth = @(x) filter(1/20*ones(1,20), 1, estimator(x), [], 2);
+	>> estimator_smooth = @(x) filter(1/20*ones(1,20), 1, ...
+			estimator(x), [], 2);
 	
 ### Temporal transfer entropy estimates
 
@@ -140,6 +141,8 @@ Assessing significance
 
 __Note:__ See [this tutorial][tutorial-gauss] for a brief explanation of what significance
 and significance threshold mean.
+
+[tutorial-gauss]: http://www.germangh.com/tutorials/gauss/tutorial_gauss.htm
 
 Determining the significance threshold for the temporal TE estimates that
 we obtained in the previous section can be easily done with 
@@ -203,15 +206,15 @@ from slave to master at any lag.
 For convenience, you can generate the four figures above by just running
 the following commands:
 
-	>> pset = generate_pset                       % load the dataset
-	>> results = tutorial-circuits-analysis(pset) % performs the TE analysis
-	>> tutorial-circuits-figures(results)         % generates the figures
+	>> pset = generate_pset                    % load dataset
+	>> res  = tutorial_circuits_analysis(pset) % TE analysis
+	>> tutorial_circuits_figures(res)          % generate figures
 
 However, the best way of learning this tutorial is that you try to re-generate
-these figures without using the provided function `tutorial-circuits-analysis`.
+these figures without using the provided function `tutorial_circuits_analysis`.
 
 	
-Credits
+Credit
 -------
 
 [German Gomez-Herrero][German] wrote this tutorial. 
@@ -220,5 +223,5 @@ The experimental measurements were obtained by Miguel C. Soriano from the
 [Institute for Cross-Disciplinary Physics and Complex Systems][IFISC],
 at Palma de Mallorca, Spain.
 
-[German]: http://www.cs.tut.fi/~gomezher/index.htm
+[German]: http://germangh.com
 [IFISC]: http://ifisc.uib.es/
